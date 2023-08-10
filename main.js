@@ -355,10 +355,13 @@ function myFunction(index) {
     }
     const h = document.getElementById("formed");
     const g = document.getElementById("formsed");
+    const l = document.getElementById("text");
     h.addEventListener("click", e => {
       if (g.style.display === "none") {
         g.style.display = "block";
         popup.style.display = "none";
+        l.value= z.txt
+
         
       } else {
         g.style.display = "none";
